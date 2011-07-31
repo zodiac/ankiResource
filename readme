@@ -16,6 +16,11 @@ hg clone https://bitbucket.org/mchaput/whoosh
 cd whoosh
 sudo python ./setup.py install
 
+4) Install mecab and python bindings
+
+Information can be found at http://mecab.sourceforge.net/
+sudo apt-get install mecab python-mecab
+
 4) Download from github
 
 git clone https://zodiac@github.com/zodiac/ankiResource.git
