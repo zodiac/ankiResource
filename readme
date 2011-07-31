@@ -1,1 +1,30 @@
-install python-django
+Instructions to use (commands to run in linux given)
+
+1) Install django 
+
+sudo apt-get install python-django
+
+2) Install haystack 
+
+git clone https://github.com/toastdriven/django-haystack.git
+cd django-haystack
+sudo python ./setup.py install
+
+3) Install whoosh
+
+hg clone https://bitbucket.org/mchaput/whoosh
+cd whoosh
+sudo python ./setup.py install
+
+4) Download from github
+
+git clone https://zodiac@github.com/zodiac/ankiResource.git
+cd ankiResource
+
+5) Create database
+
+python ./manage.py syncdb
+
+6) Run!
+
+python ./manage.py runserver
