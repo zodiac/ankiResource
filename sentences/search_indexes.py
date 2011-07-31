@@ -1,11 +1,9 @@
-# Contains indexes for haystack
 from haystack import indexes
-from haystack import site
-from ankiResource.sentences import models
+from ankiResource.sentences.models import Sentence
 
-class SentenceIndex(indexes.SearchIndex):
-	text = indexes.CharField(document=True, use_template=True)
-	sentence = indexes.CharField(model_attr='sentence')
-
-
-site.register(models.Sentence, SentenceIndex)
+class SentenceIndex(indexes.SearchIndex, indexes.Indexable):
+       text = indexes.CharField(document=True, use_template=True)
+       sentence = indexes.CharField(model_attr='sentence')
+       
+       def get_model(self):
+          return Sentence

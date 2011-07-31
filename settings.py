@@ -104,14 +104,13 @@ INSTALLED_APPS = (
 #   HAYSTACK SETTINGS    #
 ##########################
 
-# Search conf file
-HAYSTACK_SITECONF = 'ankiResource.search_sites'
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
 
-# Temp path where xapian does it's thing
-HAYSTACK_XAPIAN_PATH = os.path.join(SITE_ROOT, 'xapian')
-
-# Search engine we are using
-HAYSTACK_SEARCH_ENGINE = 'xapian'
 
 ##########################
 # SITE SPECIFIC SETTINGS #
