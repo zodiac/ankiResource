@@ -4,7 +4,7 @@ import ankiResource
 import datetime
 from tagging.fields import TagField
 from tagging.models import Tag
-from haystack.query import SearchQuerySet
+#from haystack.query import SearchQuerySet
 
 def truncate(s, l):
 	if len(s) < l:
@@ -59,9 +59,9 @@ class Sentence(models.Model):
 	def has_more(self):
 		return self.more_like_this != []
 	
-	def more_like_this(self):
-		print SearchQuerySet().all().more_like_this(self)
-		return [s.object for s in SearchQuerySet().more_like_this(self) if s.object != None]
+	#def more_like_this(self):
+	#	print SearchQuerySet().all().more_like_this(self)
+    #	return [s.object for s in SearchQuerySet().more_like_this(self) if s.object != None]
 		
 		
 		

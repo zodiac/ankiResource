@@ -91,7 +91,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
 	'django.contrib.admin',
-	'haystack',
 	'tagging',
 	'ankiResource.accounts',
 	'ankiResource.media',
@@ -99,17 +98,6 @@ INSTALLED_APPS = (
 	'ankiResource.sentences',
 	'ankiResource.lists',
 )
-
-##########################
-#   HAYSTACK SETTINGS    #
-##########################
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
-    },
-}
 
 
 ##########################

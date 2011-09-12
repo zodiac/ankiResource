@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from django.contrib.auth.models import User
 
-from haystack.query import SearchQuerySet
-
 from ankiResource import settings, accounts, media, lists
 from ankiResource.uploading.functions import *
 from ankiResource.lists.models import List
